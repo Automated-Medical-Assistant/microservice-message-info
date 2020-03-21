@@ -1,4 +1,6 @@
 {
+  "name"             : "automated-medical-assistant/microservice-message-info",
+  "license"          : "MIT",
   "require": {
     "xervice/data-provider": "^2.5"
   },
