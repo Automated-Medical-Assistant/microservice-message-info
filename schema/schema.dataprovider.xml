@@ -5,6 +5,12 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="xervice:dataprovider-01 http://static.xervice.online/schema/dataprovider.schema.xsd"
 >
+    <DataProvider name="Role">
+        <DataElement name="doctor" type="string" default="doctor"/>
+        <DataElement name="testCenter" type="string" default="testCenter"/>
+        <DataElement name="labor" type="string" default="labor"/>
+    </DataProvider>
+
     <DataProvider name="NumberCreationRequestAPI">
         <DataElement name="doctorId" type="int"/>
         <DataElement name="number" type="string"/>
