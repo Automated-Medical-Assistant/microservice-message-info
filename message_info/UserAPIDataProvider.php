@@ -16,6 +16,9 @@ final class UserAPIDataProvider extends \Xervice\DataProvider\Business\Model\Dat
     /** @var string */
     protected $role;
 
+    /** @var string */
+    protected $stateIso;
+
 
     /**
      * @return int
@@ -141,6 +144,47 @@ final class UserAPIDataProvider extends \Xervice\DataProvider\Business\Model\Dat
 
 
     /**
+     * @return string
+     */
+    public function getStateIso(): string
+    {
+        return $this->stateIso;
+    }
+
+
+    /**
+     * @param string $stateIso
+     * @return UserAPIDataProvider
+     */
+    public function setStateIso(string $stateIso)
+    {
+        $this->stateIso = $stateIso;
+
+        return $this;
+    }
+
+
+    /**
+     * @return UserAPIDataProvider
+     */
+    public function unsetStateIso()
+    {
+        $this->stateIso = null;
+
+        return $this;
+    }
+
+
+    /**
+     * @return bool
+     */
+    public function hasStateIso()
+    {
+        return ($this->stateIso !== null && $this->stateIso !== []);
+    }
+
+
+    /**
      * @return array
      */
     protected function getElements(): array
@@ -169,6 +213,16 @@ final class UserAPIDataProvider extends \Xervice\DataProvider\Business\Model\Dat
           'role' =>
           array (
             'name' => 'role',
+            'allownull' => false,
+            'default' => '',
+            'type' => 'string',
+            'is_collection' => false,
+            'is_dataprovider' => false,
+            'isCamelCase' => false,
+          ),
+          'stateIso' =>
+          array (
+            'name' => 'stateIso',
             'allownull' => false,
             'default' => '',
             'type' => 'string',

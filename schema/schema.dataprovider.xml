@@ -33,6 +33,7 @@
         <DataElement name="userId" type="int"/>
         <DataElement name="email" type="string"/>
         <DataElement name="role" type="string"/>
+        <DataElement name="stateIso" type="string"/>
     </DataProvider>
 
     <DataProvider name="UserListAPI">
