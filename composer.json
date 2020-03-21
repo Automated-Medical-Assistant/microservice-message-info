@@ -1,0 +1,11 @@
+{
+  "require": {
+    "xervice/data-provider": "^2.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/",
+      "MessageInfo\\": "message_info/"
+    }
+  }
+}
