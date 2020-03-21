@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+
+<DataProviders
+        xmlns="xervice:dataprovider-01"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="xervice:dataprovider-01 http://static.xervice.online/schema/dataprovider.schema.xsd"
+>
+    <DataProvider name="NumberCreationRequestAPI">
+        <DataElement name="doctorId" type="int"/>
+        <DataElement name="number" type="string"/>
+        <DataElement name="creationDate" type="string"/>
+    </DataProvider>
+
+    <DataProvider name="NumberAPI">
+        <DataElement name="doctorId" type="int"/>
+        <DataElement name="number" type="string"/>
+        <DataElement name="creationDate" type="string"/>
+        <DataElement name="modifiedStateDate" type="string" allownull="true"/>
+        <DataElement name="status" type="bool" allownull="true"/>
+    </DataProvider>
+
+    <DataProvider name="NumberListAPI">
+        <DataElement name="setNumbers" type="NumberAPI[]" singleton="addNumber"/>
+    </DataProvider>
+
+    <DataProvider name="NumberChangeStateRequestAPI">
+        <DataElement name="number" type="string"/>
+        <DataElement name="modifiedStateDate" type="string"/>
+        <DataElement name="status" type="bool"/>
+    </DataProvider>
+
+    <DataProvider name="UserAPI">
+        <DataElement name="userId" type="int"/>
+        <DataElement name="email" type="string"/>
+        <DataElement name="role" type="string"/>
+    </DataProvider>
+
+    <DataProvider name="UserListAPI">
+        <DataElement name="setUsers" type="UserAPI[]" singleton="addUser"/>
+    </DataProvider>
+
+</DataProviders>
