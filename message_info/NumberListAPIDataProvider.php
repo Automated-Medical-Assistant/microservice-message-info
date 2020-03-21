@@ -8,25 +8,25 @@ namespace MessageInfo;
 final class NumberListAPIDataProvider extends \Xervice\DataProvider\Business\Model\DataProvider\AbstractDataProvider implements \Xervice\DataProvider\Business\Model\DataProvider\DataProviderInterface
 {
     /** @var \MessageInfo\NumberAPIDataProvider[] */
-    protected $setNumbers = [];
+    protected $Numbers = [];
 
 
     /**
      * @return \MessageInfo\NumberAPIDataProvider[]
      */
-    public function getSetNumbers(): array
+    public function getNumbers(): array
     {
-        return $this->setNumbers;
+        return $this->Numbers;
     }
 
 
     /**
-     * @param \MessageInfo\NumberAPIDataProvider[] $setNumbers
+     * @param \MessageInfo\NumberAPIDataProvider[] $Numbers
      * @return NumberListAPIDataProvider
      */
-    public function setSetNumbers(array $setNumbers)
+    public function setNumbers(array $Numbers)
     {
-        $this->setNumbers = $setNumbers;
+        $this->Numbers = $Numbers;
 
         return $this;
     }
@@ -35,9 +35,9 @@ final class NumberListAPIDataProvider extends \Xervice\DataProvider\Business\Mod
     /**
      * @return NumberListAPIDataProvider
      */
-    public function unsetSetNumbers()
+    public function unsetNumbers()
     {
-        $this->setNumbers = null;
+        $this->Numbers = null;
 
         return $this;
     }
@@ -46,19 +46,19 @@ final class NumberListAPIDataProvider extends \Xervice\DataProvider\Business\Mod
     /**
      * @return bool
      */
-    public function hasSetNumbers()
+    public function hasNumbers()
     {
-        return ($this->setNumbers !== null && $this->setNumbers !== []);
+        return ($this->Numbers !== null && $this->Numbers !== []);
     }
 
 
     /**
-     * @param \MessageInfo\NumberAPIDataProvider $addNumber
+     * @param \MessageInfo\NumberAPIDataProvider $Number
      * @return NumberListAPIDataProvider
      */
-    public function addaddNumber(NumberAPIDataProvider $addNumber)
+    public function addNumber(NumberAPIDataProvider $Number)
     {
-        $this->setNumbers[] = $addNumber; return $this;
+        $this->Numbers[] = $Number; return $this;
     }
 
 
@@ -68,16 +68,16 @@ final class NumberListAPIDataProvider extends \Xervice\DataProvider\Business\Mod
     protected function getElements(): array
     {
         return array (
-          'setNumbers' =>
+          'Numbers' =>
           array (
-            'name' => 'setNumbers',
+            'name' => 'Numbers',
             'allownull' => false,
             'default' => '',
             'type' => '\\MessageInfo\\NumberAPIDataProvider[]',
             'is_collection' => true,
             'is_dataprovider' => false,
             'isCamelCase' => false,
-            'singleton' => 'addNumber',
+            'singleton' => 'Number',
             'singleton_type' => '\\MessageInfo\\NumberAPIDataProvider',
           ),
         );

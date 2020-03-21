@@ -8,25 +8,25 @@ namespace MessageInfo;
 final class UserListAPIDataProvider extends \Xervice\DataProvider\Business\Model\DataProvider\AbstractDataProvider implements \Xervice\DataProvider\Business\Model\DataProvider\DataProviderInterface
 {
     /** @var \MessageInfo\UserAPIDataProvider[] */
-    protected $setUsers = [];
+    protected $Users = [];
 
 
     /**
      * @return \MessageInfo\UserAPIDataProvider[]
      */
-    public function getSetUsers(): array
+    public function getUsers(): array
     {
-        return $this->setUsers;
+        return $this->Users;
     }
 
 
     /**
-     * @param \MessageInfo\UserAPIDataProvider[] $setUsers
+     * @param \MessageInfo\UserAPIDataProvider[] $Users
      * @return UserListAPIDataProvider
      */
-    public function setSetUsers(array $setUsers)
+    public function setUsers(array $Users)
     {
-        $this->setUsers = $setUsers;
+        $this->Users = $Users;
 
         return $this;
     }
@@ -35,9 +35,9 @@ final class UserListAPIDataProvider extends \Xervice\DataProvider\Business\Model
     /**
      * @return UserListAPIDataProvider
      */
-    public function unsetSetUsers()
+    public function unsetUsers()
     {
-        $this->setUsers = null;
+        $this->Users = null;
 
         return $this;
     }
@@ -46,19 +46,19 @@ final class UserListAPIDataProvider extends \Xervice\DataProvider\Business\Model
     /**
      * @return bool
      */
-    public function hasSetUsers()
+    public function hasUsers()
     {
-        return ($this->setUsers !== null && $this->setUsers !== []);
+        return ($this->Users !== null && $this->Users !== []);
     }
 
 
     /**
-     * @param \MessageInfo\UserAPIDataProvider $addUser
+     * @param \MessageInfo\UserAPIDataProvider $User
      * @return UserListAPIDataProvider
      */
-    public function addaddUser(UserAPIDataProvider $addUser)
+    public function addUser(UserAPIDataProvider $User)
     {
-        $this->setUsers[] = $addUser; return $this;
+        $this->Users[] = $User; return $this;
     }
 
 
@@ -68,16 +68,16 @@ final class UserListAPIDataProvider extends \Xervice\DataProvider\Business\Model
     protected function getElements(): array
     {
         return array (
-          'setUsers' =>
+          'Users' =>
           array (
-            'name' => 'setUsers',
+            'name' => 'Users',
             'allownull' => false,
             'default' => '',
             'type' => '\\MessageInfo\\UserAPIDataProvider[]',
             'is_collection' => true,
             'is_dataprovider' => false,
             'isCamelCase' => false,
-            'singleton' => 'addUser',
+            'singleton' => 'User',
             'singleton_type' => '\\MessageInfo\\UserAPIDataProvider',
           ),
         );
