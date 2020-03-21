@@ -20,7 +20,7 @@
     </DataProvider>
 
     <DataProvider name="NumberListAPI">
-        <DataElement name="setNumbers" type="NumberAPI[]" singleton="addNumber"/>
+        <DataElement name="Numbers" type="NumberAPI[]" singleton="Number"/>
     </DataProvider>
 
     <DataProvider name="NumberChangeStateRequestAPI">
@@ -37,7 +37,7 @@
     </DataProvider>
 
     <DataProvider name="UserListAPI">
-        <DataElement name="setUsers" type="UserAPI[]" singleton="addUser"/>
+        <DataElement name="Users" type="UserAPI[]" singleton="User"/>
     </DataProvider>
 
 </DataProviders>
